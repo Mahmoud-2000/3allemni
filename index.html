@@ -1,61 +1,74 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>علمني</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Google Font "El Messiri" -->
-  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+  <title>منصة</title>
+
+  <!-- Bootstrap CSS (Replace with the actual path to your Bootstrap CSS file) -->
+  <link rel="stylesheet" href="path/to/bootstrap.min.css">
+
+  <!-- Link to your custom stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">علمني</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">الصفحة الرئيسية</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="live-session.html">الحصص المباشرة</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pdf.html">دروس PDF</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="videos.html">الفيديوهات المبسطة</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="registration.html">التسجيل</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+
+  <nav>
+    <a href="index.html" class="active">الرئيسية 🏠</a>
+    <a href="subjects.html" class="submenu-trigger">التمارين 📚</a>
+    <a href="contact-us.html">اتصل بنا 📧</a>
+
+    <!-- Subjects Submenu -->
+    <ul class="submenu">
+      <li><a href="#">عربي 🇸🇦</a></li>
+      <li><a href="#">فرنسي 🇫🇷</a></li>
+    </ul>
   </nav>
 
-  <div class="container mt-4">
-    <h1 class="text-center mb-4">مرحبًا بكم في موقع <span>علمني</span></h1>
-    <div class="separator"></div>
-    <h2 class="text-center mb-4" style="font-weight: 700; font-size: 50px;">كل <span>الحصص المباشرة</span> موجودة على الموقع</h2>
-    <h2 class="text-center mb-4" style="font-weight: 700;  font-size: 50px; ">وهناك <span>فيديوهات مبسطة</span> لمن يجد صعوبة في فهم الدرس</h2>
-    <h2 class="text-center mb-4" style="font-weight: 700;  font-size: 50px;">كما أن <span>كل الدروس موجودة في شكل pdf</span> ويمكنكم قرائتها أو تحميلها</h2>
+  <div class="filter-container">
+    <p class="filter-text">إختر المادة التي تريد مطالعتها:</p>
+    <button class="filter-btn" onclick="filterFiles('arabic')">عربي</button>
+    <button class="filter-btn" onclick="filterFiles('french')">فرنسي</button>
   </div>
 
-  <!-- Bootstrap JS and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <div class="container">
+    <h1 class="mt-4 mb-4">الدروس</h1>
+
+    <div class="file-container">
+      <div class="file-item arabic">
+        <div class="file-icon">📄</div>
+        <div class="file-name">الدرس 1: <br>الجملة الفعلية</div>
+        <div class="file-actions">
+          <a href="https://drive.google.com/file/d/1LJiq3axinocouqa5UJCxkgVJV1_njYST/view?usp=sharing"
+            class="btn btn-view">عرض</a>
+          <a href="https://docs.google.com/uc?export=download&id=1LJiq3axinocouqa5UJCxkgVJV1_njYST"
+            class="btn btn-download" download>تحميل</a>
+        </div>
+      </div>
+
+      <div class="file-item french">
+        <div class="file-icon">📄</div>
+        <div class="file-name">:Leçon 1<br> Les graphies</div>
+        <div class="file-actions">
+          <a href="https://drive.google.com/file/d/1bsC7d6txt-Oy_7vtI2PGssOaqmi_dt8J/view?usp=sharing"
+            class="btn btn-view">عرض</a>
+          <a href="https://docs.google.com/uc?export=download&id=1bsC7d6txt-Oy_7vtI2PGssOaqmi_dt8J"
+            class="btn btn-download" download>تحميل</a>
+        </div>
+      </div>
+
+      <!-- Add more file items as needed -->
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (Replace with the actual path to your Bootstrap JS file) -->
+  <script src="path/to/bootstrap.bundle.min.js"></script>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
