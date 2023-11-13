@@ -67,6 +67,26 @@
 
   <!-- Bootstrap JS (Replace with the actual path to your Bootstrap JS file) -->
   <script src="path/to/bootstrap.bundle.min.js"></script>
+  <script>
+  function filterFiles(language) {
+    // Reset visibility for all items
+    document.querySelectorAll('.file-item').forEach(item => {
+      item.style.display = 'flex';
+    });
+
+    // Hide items not matching the selected language
+    if (language === 'arabic') {
+      document.querySelectorAll('.french').forEach(item => {
+        item.style.display = 'none';
+      });
+    } else if (language === 'french') {
+      document.querySelectorAll('.arabic').forEach(item => {
+        item.style.display = 'none';
+      });
+    }
+  }
+</script>
+
 
   <script src="script.js"></script>
 </body>
